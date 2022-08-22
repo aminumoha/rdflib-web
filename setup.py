@@ -62,7 +62,7 @@ config = dict(
 
 if sys.version_info[0] >= 3:
     from setuptools import setup
-    config.update({'use_2to3': false})
+    config.update({'use_2to3': False})
     config.update({'src_root': setup_python3()})
 else:
     try:
