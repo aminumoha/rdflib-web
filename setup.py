@@ -23,7 +23,7 @@ def setup_python3():
         if copied and outf.endswith(".py"):
             outfiles_2to3.append(outf)
   
-    #util.dry_run(outfiles_2to3)
+    util.run_2to3(outfiles_2to3)
   
     # arrange setup to use the copy
     sys.path.insert(0, tmp_src)
@@ -62,7 +62,7 @@ config = dict(
 
 if sys.version_info[0] >= 3:
     from setuptools import setup
-    #config.update({'use_2to3': True})
+    config.update({'use_2to3': false})
     config.update({'src_root': setup_python3()})
 else:
     try:
