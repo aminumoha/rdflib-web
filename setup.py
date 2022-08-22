@@ -23,7 +23,7 @@ def setup_python3():
         if copied and outf.endswith(".py"):
             outfiles_2to3.append(outf)
   
-    util.dry_run(outfiles_2to3)
+    #util.dry_run(outfiles_2to3)
   
     # arrange setup to use the copy
     sys.path.insert(0, tmp_src)
